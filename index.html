@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <!-- <header class="navbar">
+    <h1 class="logo">Muhammad Aziz Assalam </h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header> -->
+
   
   <!-- NAVBAR -->
   <header class="navbar">
@@ -107,6 +120,31 @@
   </div>
 </section>
 
+  <!-- <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h4>Sales Performance Dashboard</h4>
+        <p>Analyzed monthly sales data to identify trends and improve revenue strategy.</p>
+        <span>Tools: SQL, Power BI</span>
+      </div>
+
+      <div class="project-card">
+        <h4>Customer Churn Analysis</h4>
+        <p>Built predictive insights to reduce customer churn rate.</p>
+        <span>Tools: Python, Pandas</span>
+      </div>
+
+      <div class="project-card">
+        <h4>Healthcare Data Analysis</h4>
+        <p>Provided insights to improve operational efficiency in hospitals.</p>
+        <span>Tools: Excel, Tableau</span>
+      </div>
+
+    </div>
+  </section> -->
+
   <!-- EXPERIENCE -->
   <section id="experience" class="section bg-light">
     <h3>Experience</h3>
@@ -119,7 +157,7 @@
       </div>
   
       <div class="experience-card">
-        <img src="https://azizzmuhammad.github.io/DAPortofolio/images2.jpg" alt="">
+        <img src="https://azizzmuhammad.github.io/DAPortofolio/images1.jpg" alt="">
         <h4>Healthcare Project</h4>
         <p>Operational efficiency analysis</p>
       </div>
@@ -140,11 +178,17 @@
       onsubmit="return handleSubmit();"
       class="contact-form"
     >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="company" style="display:none">
+
       <input name="name" placeholder="Your Name" required>
       <input name="email" type="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
   
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn" id="submitBtn">
+        <span class="btn-text">Send Message</span>
+        <span class="spinner"></span>
+      </button>
     </form>
   </section>
   
@@ -153,20 +197,26 @@
     <p>© 2026 Muhammad Aziz Assalam | myPortofolio</p>
   </footer>
   
+<!-- HANDLE SUBMIT CONTACT FORM -->
   <script>
     function handleSubmit() {
-      // beri waktu Apps Script menyimpan data
+      const form = document.querySelector(".contact-form");
+      const btn = document.getElementById("submitBtn");
+
+      form.classList.add("form-success");
+      btn.classList.add("loading");
+      btn.disabled = true;
+
       setTimeout(() => {
         window.location.href =
           "https://azizzmuhammad.github.io/DAPortofolio/success.html";
-      }, 800);
-  
-      return true; // form tetap submit ke iframe
+      }, 1000);
+
+      return true;
     }
   </script>
+
+  <script src="main.js"></script>
 </body>
 </html>
-
-
-
 
