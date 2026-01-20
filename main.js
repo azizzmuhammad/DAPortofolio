@@ -1,43 +1,16 @@
 // Simple form submit handler
-const form = document.getElementById("contactForm");
-const statusText = document.getElementById("status");
+<form 
+  action="https://script.google.com/macros/s/AKfycbwmWmNHSVa8qpVLhbFWBpD5pmk98vQUkOysoHYNOGVcPZQsyK8njzHc790gCxzDNa8/exec"
+  method="POST"
+  class="contact-form"
+>
+  <input name="name" placeholder="Your Name" required>
+  <input name="email" type="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  <button type="submit" class="btn">Send Message</button>
+</form>
 
-  statusText.textContent = "Sending...";
-  statusText.style.color = "#2563eb";
-
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  };
-
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwmWmNHSVa8qpVLhbFWBpD5pmk98vQUkOysoHYNOGVcPZQsyK8njzHc790gCxzDNa8/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
-      
-
-    const result = await response.json();
-
-    if (result.status === "success") {
-      statusText.textContent = "Message sent successfully!";
-      statusText.style.color = "green";
-      form.reset();
-    } else {
-      throw new Error();
-    }
-  } catch {
-    statusText.textContent = "Failed to send message.";
-    statusText.style.color = "red";
-  }
-});
 
 // document.querySelector(".contact-form").addEventListener("submit", function(e) {
 //     e.preventDefault();
