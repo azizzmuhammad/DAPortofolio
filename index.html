@@ -64,6 +64,32 @@
   <!-- SKILLS -->
   <section id="skills" class="section bg-light">
     <h3>Skills</h3>
+  
+    <div class="skills-modern">
+      <div class="skill-box">
+        <span>SQL</span>
+        <div class="bar"><div style="width:90%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Python</span>
+        <div class="bar"><div style="width:85%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Tableau</span>
+        <div class="bar"><div style="width:80%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Power BI</span>
+        <div class="bar"><div style="width:75%"></div></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section id="skills" class="section bg-light">
+    <h3>Skills</h3>
     <div class="skills-grid">
       <div class="skill-card">SQL</div>
       <div class="skill-card">Python</div>
@@ -72,10 +98,29 @@
       <div class="skill-card">Power BI</div>
       <div class="skill-card">Statistics</div>
     </div>
-  </section>
+  </section> -->
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
+<section id="projects" class="section">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    
+    <a href="https://public.tableau.com/xxxx" target="_blank" class="project-card">
+      <h4>Sales Dashboard</h4>
+      <p>Interactive dashboard on Tableau Public</p>
+      <span>Tableau</span>
+    </a>
+  
+    <a href="https://docs.google.com/spreadsheets/xxxx" target="_blank" class="project-card">
+      <h4>Sales Spreadsheet</h4>
+      <p>Data cleaning & analysis</p>
+      <span>Google Sheets</span>
+    </a>
+  
+  </div>
+</section>
+
+  <!-- <section id="projects" class="section">
     <h3>Projects</h3>
     <div class="project-grid">
 
@@ -98,10 +143,29 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <!-- EXPERIENCE -->
   <section id="experience" class="section bg-light">
+    <h3>Experience</h3>
+  
+    <div class="experience-grid">
+      <div class="experience-card">
+        <img src="C:\Users\user\Desktop\Data Analyst Portofolio\images1.jpg" alt="">
+        <h4>Data Analyst – ABC Company</h4>
+        <p>Created dashboards & insights for management</p>
+      </div>
+  
+      <div class="experience-card">
+        <img src="C:\Users\user\Desktop\Data Analyst Portofolio\images2.jpg" alt="">
+        <h4>Healthcare Project</h4>
+        <p>Operational efficiency analysis</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- <section id="experience" class="section bg-light">
     <h3>Experience</h3>
     <div class="experience-item">
       <h4>Junior Data Analyst – ABC Company</h4>
@@ -112,10 +176,30 @@
         <li>Performed data cleaning and analysis</li>
       </ul>
     </div>
-  </section>
+  </section> -->
+
+  
 
   <!-- CONTACT -->
   <section id="contact" class="section">
+    <h3>Contact</h3>
+  
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+  
+      <button type="submit" class="btn">Send Message</button>
+      <p id="status" style="margin-top:10px;"></p>
+    </form>
+  </section>
+  
+  <p id="success-msg" style="display:none;color:green;">
+    Message sent successfully!
+  </p>
+  
+
+  <!-- <section id="contact" class="section">
     <h3>Contact</h3>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required />
@@ -123,7 +207,7 @@
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
-  </section>
+  </section> -->
 
   <!-- FOOTER -->
   <footer>
