@@ -1,55 +1,203 @@
-// Simple form submit handler
-<form 
-  action="https://script.google.com/macros/s/AKfycbwmWmNHSVa8qpVLhbFWBpD5pmk98vQUkOysoHYNOGVcPZQsyK8njzHc790gCxzDNa8/exec"
-  method="POST"
-  class="contact-form"
->
-  <input name="name" placeholder="Your Name" required>
-  <input name="email" type="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PORTOFOLIO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <button type="submit" class="btn">Send Message</button>
-</form>
+  <!-- NAVBAR -->
+  <!-- <header class="navbar">
+    <h1 class="logo">Muhammad Aziz Assalam </h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header> -->
+
+  
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">PORTOFOLIO</h1>
+  
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <nav id="nav-menu">
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#skills" class="nav-btn">Skills</a>
+      <a href="#projects" class="nav-btn">Projects</a>
+      <a href="#experience" class="nav-btn">Experience</a>
+      <a href="#contact" class="nav-btn primary">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>MUHAMMAD AZIZ ASSALAM</h2>
+    <p>Turning Data Into Meaningful Insights</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn">Download CV</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <p>
+      I am a Data Analyst with experience in transforming raw data into actionable insights.
+      Skilled in data visualization, statistical analysis, and dashboard development
+      to support data-driven decision making.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section bg-light">
+    <h3>Skills</h3>
+  
+    <div class="skills-modern">
+      <div class="skill-box">
+        <span>SQL</span>
+        <div class="bar"><div style="width:90%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Python</span>
+        <div class="bar"><div style="width:85%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Tableau</span>
+        <div class="bar"><div style="width:80%"></div></div>
+      </div>
+  
+      <div class="skill-box">
+        <span>Power BI</span>
+        <div class="bar"><div style="width:75%"></div></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section id="skills" class="section bg-light">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Excel</div>
+      <div class="skill-card">Tableau</div>
+      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Statistics</div>
+    </div>
+  </section> -->
+
+  <!-- PROJECTS -->
+<section id="projects" class="section">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    
+    <a href="https://public.tableau.com/xxxx" target="_blank" class="project-card">
+      <h4>Sales Dashboard</h4>
+      <p>Interactive dashboard on Tableau Public</p>
+      <span>Tableau</span>
+    </a>
+  
+    <a href="https://docs.google.com/spreadsheets/xxxx" target="_blank" class="project-card">
+      <h4>Sales Spreadsheet</h4>
+      <p>Data cleaning & analysis</p>
+      <span>Google Sheets</span>
+    </a>
+  
+  </div>
+</section>
+
+  <!-- <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h4>Sales Performance Dashboard</h4>
+        <p>Analyzed monthly sales data to identify trends and improve revenue strategy.</p>
+        <span>Tools: SQL, Power BI</span>
+      </div>
+
+      <div class="project-card">
+        <h4>Customer Churn Analysis</h4>
+        <p>Built predictive insights to reduce customer churn rate.</p>
+        <span>Tools: Python, Pandas</span>
+      </div>
+
+      <div class="project-card">
+        <h4>Healthcare Data Analysis</h4>
+        <p>Provided insights to improve operational efficiency in hospitals.</p>
+        <span>Tools: Excel, Tableau</span>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section bg-light">
+    <h3>Experience</h3>
+  
+    <div class="experience-grid">
+      <div class="experience-card">
+        <img src="https://azizzmuhammad.github.io/DAPortofolio/images1.jpg" alt="">
+        <h4>Data Analyst – ABC Company</h4>
+        <p>Created dashboards & insights for management</p>
+      </div>
+  
+      <div class="experience-card">
+        <img src="https://azizzmuhammad.github.io/DAPortofolio/images1.jpg" alt="">
+        <h4>Healthcare Project</h4>
+        <p>Operational efficiency analysis</p>
+      </div>
+    </div>
+  </section>
+  
+ <!-- CONTACT -->
+<section id="contact" class="section">
+  <h3>Contact</h3>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- Simple form submit handler -->
+  <form
+    action="https://script.google.com/macros/s/AKfycbwmWmNHSVa8qpVLhbFWBpD5pmk98vQUkOysoHYNOGVcPZQsyK8njzHc790gCxzDNa8/exec"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="return handleSubmit();"
+    class="contact-form"
+  >
+    <input name="name" placeholder="Your Name" required>
+    <input name="email" type="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
 
 
-// document.querySelector(".contact-form").addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     alert("Thank you! Your message has been sent.");
-//     this.reset();
-//   });
-/* HAMBURGER MENU */
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Muhammad Aziz Assalam | myPortofolio</p>
+  </footer>
+  
+<script>
+  function handleSubmit() {
+    alert("HANDLE SUBMIT TERPANGGIL");
+    return false;
+  }
+</script>
+</body>
+</html>
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-
-/* ACTIVE SECTION ON SCROLL */
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-btn");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
-// Smooth scroll & close mobile menu
-document.querySelectorAll('.nav-btn').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-    });
-  });
