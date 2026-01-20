@@ -184,14 +184,18 @@
   <section id="contact" class="section">
     <h3>Contact</h3>
   
-    <form id="contactForm" class="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
+    <form 
+    action="PASTE_URL_WEB_APP"
+    method="POST"
+    class="contact-form"
+  >
+    <input name="name" placeholder="Your Name" required />
+    <input name="email" type="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
   
-      <button type="submit" class="btn">Send Message</button>
-      <p id="status" style="margin-top:10px;"></p>
-    </form>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  
   </section>
   
   <p id="success-msg" style="display:none;color:green;">
