@@ -165,39 +165,43 @@
   </section>
   
  <!-- CONTACT -->
-<section id="contact" class="section">
-  <h3>Contact</h3>
-
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-  <!-- Simple form submit handler -->
-  <form
-    action="https://script.google.com/macros/s/AKfycbwmWmNHSVa8qpVLhbFWBpD5pmk98vQUkOysoHYNOGVcPZQsyK8njzHc790gCxzDNa8/exec"
-    method="POST"
-    target="hidden_iframe"
-    onsubmit="return handleSubmit();"
-    class="contact-form"
-  >
-    <input name="name" placeholder="Your Name" required>
-    <input name="email" type="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
-
-
+ <section id="contact" class="section">
+    <h3>Contact</h3>
+  
+    <!-- iframe tersembunyi -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  
+    <form
+      action="https://script.google.com/macros/s/AKfycbxSSdDxMejGVPCMGOyDFMpT3OH9tA6gBITX805oj2JdCwkW4t6mxPJe6WNJCyGFDu16/exec"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="return handleSubmit();"
+      class="contact-form"
+    >
+      <input name="name" placeholder="Your Name" required>
+      <input name="email" type="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+  
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Muhammad Aziz Assalam | myPortofolio</p>
   </footer>
   
-<script>
-  function handleSubmit() {
-    alert("HANDLE SUBMIT TERPANGGIL");
-    return false;
-  }
-</script>
+  <script>
+    function handleSubmit() {
+      // beri waktu Apps Script menyimpan data
+      setTimeout(() => {
+        window.location.href =
+          "https://azizzmuhammad.github.io/DAPortofolio/success.html";
+      }, 800);
+  
+      return true; // form tetap submit ke iframe
+    }
+  </script>
 </body>
 </html>
 
